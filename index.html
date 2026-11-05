@@ -1,429 +1,89 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#e83e8c"><title>Peso Certo | Atacadão Farma Centro</title>
+<style>:root {  --pink:#e83e8c;  --pink-dark:#c92c73;  --pink-light:#fff0f6;  --purple:#713b85;  --text:#33313a;  --muted:#77717c;  --border:#f1dce6;  --shadow:0 8px 25px rgba(100,35,70,.08);}*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;background:#fff8fb;color:var(--text);line-height:1.6}header{background:linear-gradient(135deg,#e83e8c,#a83d87);color:white;text-align:center;padding:38px 18px 45px;border-radius:0 0 30px 30px}.brand{font-size:16px;font-weight:bold;letter-spacing:1.5px;margin-bottom:15px}header h1{font-size:clamp(32px,6vw,45px);margin-bottom:8px}header p{max-width:570px;margin:auto;font-size:18px}.container{width:min(100% - 28px,1000px);margin:25px auto 50px}.card{background:white;padding:26px;border-radius:19px;box-shadow:var(--shadow);margin-bottom:22px;border:1px solid var(--border)}.section-title{color:var(--pink-dark);font-size:26px;margin-bottom:10px}.subtitle{color:var(--muted);font-size:17px;margin-bottom:20px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}label{font-size:17px;font-weight:bold}input,select{width:100%;padding:15px;border:1px solid #e8d6df;border-radius:11px;font-size:17px;outline:none;background:white;color:var(--text)}input:focus,select:focus{border-color:var(--pink);box-shadow:0 0 0 3px #e83e8c20}button{border:none;cursor:pointer;font-weight:bold;border-radius:12px;padding:15px 18px;font-size:17px;transition:.2s}button:hover{transform:translateY(-2px)}.btn-primary{width:100%;background:var(--pink);color:white;margin-top:20px}.btn-primary:hover{background:var(--pink-dark)}.btn-whatsapp{background:#1eae68;color:white;width:100%;margin-top:14px}.btn-whatsapp:hover{background:#168d53}.result{display:none;margin-top:24px;padding:22px;border-radius:16px;border:1px solid var(--border);background:#fffafd}.result-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}.result-label{color:var(--muted);font-size:16px;font-weight:bold}.imc-number{font-size:48px;font-weight:bold;color:var(--purple);line-height:1.3}.status{display:inline-block;padding:10px 15px;border-radius:30px;font-size:15px;font-weight:bold;margin:12px 0}.status.green{background:#e3f7ec;color:#137447}.status.orange{background:#fff1d8;color:#9b6200}.status.red{background:#ffe5e5;color:#b52b2b}.status.purple{background:#f0e6f7;color:#713b85}.result-message{font-size:17px;margin-bottom:10px}.result-detail{color:var(--muted);font-size:15px;margin-top:15px}.scale-title{font-size:16px;font-weight:bold;margin:22px 0 9px}.scale{display:flex;width:100%;height:14px;overflow:hidden;border-radius:20px;background:#eee}.scale span:nth-child(1){background:#e6a23c;flex:1}.scale span:nth-child(2){background:#20a76a;flex:1.5}.scale span:nth-child(3){background:#e6a23c;flex:1}.scale span:nth-child(4){background:#ed854b;flex:1}.scale span:nth-child(5){background:#df5555;flex:1}.scale span:nth-child(6){background:#a72f43;flex:1}.scale-labels{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.scale-item{font-size:15px;padding:11px;border-radius:8px;background:#f8f5f7}.scale-item strong{display:block;margin-bottom:3px}.scale-item.active{outline:2px solid var(--pink);background:var(--pink-light)}.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:15px}.tip{background:#fff7fa;border-radius:12px;padding:16px;font-size:16px}.tip strong{display:block;color:var(--pink-dark);margin-bottom:5px}.category-heading{display:flex;align-items:center;gap:12px;margin:30px 0 14px}.category-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:var(--pink-light);font-size:25px;flex-shrink:0}.category-heading h2{color:var(--pink-dark);font-size:24px}.category-heading p{color:var(--muted);font-size:16px}.products{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.product{background:white;border:1px solid var(--border);border-radius:17px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column}.product-icon{font-size:33px;margin-bottom:8px}.product h3{color:var(--purple);font-size:20px;margin-bottom:9px}.product p{font-size:16px;line-height:1.6;color:#625c66;margin-bottom:10px}.product .detail{font-size:15px;color:var(--muted);margin-top:auto;padding-top:8px}.product button{font-size:15px}.info-box{background:#f8f2fb;border-left:4px solid var(--purple);border-radius:10px;padding:17px;margin-top:18px;font-size:16px}footer{text-align:center;background:#342b37;color:white;padding:28px 18px;font-size:16px}footer strong{color:#ff91c2}.recommendation-section{display:none}@media(max-width:600px){.form-grid,.products,.tips{grid-template-columns:1fr}.card{padding:20px}.section-title{font-size:24px}.subtitle{font-size:16px}.scale-item{font-size:14px}header{padding:30px 15px 38px}.scale-labels{grid-template-columns:repeat(2,1fr)}.imc-number{font-size:43px}}</style></head>
+<body><header>  <div class="brand">ATACADÃO FARMA CENTRO</div>  <h1>🌸 Peso Certo</h1>  <p>Conheça melhor seu corpo, descubra seu resultado de IMC e encontre informações para cuidar da sua saúde.</p></header>
+<main class="container"><section class="card">  <h2 class="section-title">📊 Calculadora de IMC</h2>  <p class="subtitle">Informe seus dados para calcular seu Índice de Massa Corporal. Aceitamos pessoas a partir de 10 anos.</p>
+  <form id="imcForm">    <div class="form-grid">      <div class="field full">        <label for="nome">Seu nome (opcional)</label>        <input id="nome" type="text" placeholder="Como podemos chamar você?">      </div>
+      <!-- ALTERAÇÃO AQUI: Mudado para type="text" com máscara automática DD/MM/AAAA para digitação rápida no celular -->
+      <div class="field">        <label for="nascimento">Data de nascimento (DD/MM/AAAA)</label>        <input id="nascimento" type="text" placeholder="DD/MM/AAAA" maxlength="10" autocomplete="off" required>      </div>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#e83e8c">
-<title>Peso Certo | Atacadão Farma Centro</title>
-
-<style>
-:root {
-  --pink:#e83e8c;
-  --pink-dark:#c92c73;
-  --pink-light:#fff0f6;
-  --purple:#713b85;
-  --text:#33313a;
-  --muted:#77717c;
-  --border:#f1dce6;
-  --shadow:0 8px 25px rgba(100,35,70,.08);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:#fff8fb;color:var(--text);line-height:1.6}
-header{background:linear-gradient(135deg,#e83e8c,#a83d87);color:white;text-align:center;padding:38px 18px 45px;border-radius:0 0 30px 30px}
-.brand{font-size:16px;font-weight:bold;letter-spacing:1.5px;margin-bottom:15px}
-header h1{font-size:clamp(32px,6vw,45px);margin-bottom:8px}
-header p{max-width:570px;margin:auto;font-size:18px}
-.container{width:min(100% - 28px,1000px);margin:25px auto 50px}
-.card{background:white;padding:26px;border-radius:19px;box-shadow:var(--shadow);margin-bottom:22px;border:1px solid var(--border)}
-.section-title{color:var(--pink-dark);font-size:26px;margin-bottom:10px}
-.subtitle{color:var(--muted);font-size:17px;margin-bottom:20px}
-.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.field{display:flex;flex-direction:column;gap:8px}
-.field.full{grid-column:1/-1}
-label{font-size:17px;font-weight:bold}
-input,select{width:100%;padding:15px;border:1px solid #e8d6df;border-radius:11px;font-size:17px;outline:none;background:white;color:var(--text)}
-input:focus,select:focus{border-color:var(--pink);box-shadow:0 0 0 3px #e83e8c20}
-button{border:none;cursor:pointer;font-weight:bold;border-radius:12px;padding:15px 18px;font-size:17px;transition:.2s}
-button:hover{transform:translateY(-2px)}
-.btn-primary{width:100%;background:var(--pink);color:white;margin-top:20px}
-.btn-primary:hover{background:var(--pink-dark)}
-.btn-whatsapp{background:#1eae68;color:white;width:100%;margin-top:14px}
-.btn-whatsapp:hover{background:#168d53}
-.result{display:none;margin-top:24px;padding:22px;border-radius:16px;border:1px solid var(--border);background:#fffafd}
-.result-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.result-label{color:var(--muted);font-size:16px;font-weight:bold}
-.imc-number{font-size:48px;font-weight:bold;color:var(--purple);line-height:1.3}
-.status{display:inline-block;padding:10px 15px;border-radius:30px;font-size:15px;font-weight:bold;margin:12px 0}
-.status.green{background:#e3f7ec;color:#137447}
-.status.orange{background:#fff1d8;color:#9b6200}
-.status.red{background:#ffe5e5;color:#b52b2b}
-.status.purple{background:#f0e6f7;color:#713b85}
-.result-message{font-size:17px;margin-bottom:10px}
-.result-detail{color:var(--muted);font-size:15px;margin-top:15px}
-.scale-title{font-size:16px;font-weight:bold;margin:22px 0 9px}
-.scale{display:flex;width:100%;height:14px;overflow:hidden;border-radius:20px;background:#eee}
-.scale span:nth-child(1){background:#e6a23c;flex:1}
-.scale span:nth-child(2){background:#20a76a;flex:1.5}
-.scale span:nth-child(3){background:#e6a23c;flex:1}
-.scale span:nth-child(4){background:#ed854b;flex:1}
-.scale span:nth-child(5){background:#df5555;flex:1}
-.scale span:nth-child(6){background:#a72f43;flex:1}
-.scale-labels{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
-.scale-item{font-size:15px;padding:11px;border-radius:8px;background:#f8f5f7}
-.scale-item strong{display:block;margin-bottom:3px}
-.scale-item.active{outline:2px solid var(--pink);background:var(--pink-light)}
-.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:15px}
-.tip{background:#fff7fa;border-radius:12px;padding:16px;font-size:16px}
-.tip strong{display:block;color:var(--pink-dark);margin-bottom:5px}
-.category-heading{display:flex;align-items:center;gap:12px;margin:30px 0 14px}
-.category-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:var(--pink-light);font-size:25px;flex-shrink:0}
-.category-heading h2{color:var(--pink-dark);font-size:24px}
-.category-heading p{color:var(--muted);font-size:16px}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.product{background:white;border:1px solid var(--border);border-radius:17px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.product-icon{font-size:33px;margin-bottom:8px}
-.product h3{color:var(--purple);font-size:20px;margin-bottom:9px}
-.product p{font-size:16px;line-height:1.6;color:#625c66;margin-bottom:10px}
-.product .detail{font-size:15px;color:var(--muted);margin-top:auto;padding-top:8px}
-.product button{font-size:15px}
-.info-box{background:#f8f2fb;border-left:4px solid var(--purple);border-radius:10px;padding:17px;margin-top:18px;font-size:16px}
-footer{text-align:center;background:#342b37;color:white;padding:28px 18px;font-size:16px}
-footer strong{color:#ff91c2}
-.recommendation-section{display:none}
-@media(max-width:600px){
-.form-grid,.products,.tips{grid-template-columns:1fr}
-.card{padding:20px}
-.section-title{font-size:24px}
-.subtitle{font-size:16px}
-.scale-item{font-size:14px}
-header{padding:30px 15px 38px}
-.scale-labels{grid-template-columns:repeat(2,1fr)}
-.imc-number{font-size:43px}
-}
-</style>
-</head>
-
-<body>
-<header>
-  <div class="brand">ATACADÃO FARMA CENTRO</div>
-  <h1>🌸 Peso Certo</h1>
-  <p>Conheça melhor seu corpo, descubra seu resultado de IMC e encontre informações para cuidar da sua saúde.</p>
-</header>
-
-<main class="container">
-<section class="card">
-  <h2 class="section-title">📊 Calculadora de IMC</h2>
-  <p class="subtitle">Informe seus dados para calcular seu Índice de Massa Corporal. Aceitamos pessoas a partir de 10 anos.</p>
-
-  <form id="imcForm">
-    <div class="form-grid">
-      <div class="field full">
-        <label for="nome">Seu nome (opcional)</label>
-        <input id="nome" type="text" placeholder="Como podemos chamar você?">
-      </div>
-      <div class="field">
-        <label for="nascimento">Data de nascimento</label>
-        <input id="nascimento" type="date" required>
-      </div>
-      <div class="field">
-        <label for="sexo">Sexo para referência do IMC</label>
-        <select id="sexo" required>
-          <option value="">Selecione</option>
-          <option value="masculino">Masculino</option>
-          <option value="feminino">Feminino</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="peso">Peso em kg</label>
-        <input id="peso" type="number" min="20" max="350" step="0.1" placeholder="Ex.: 75" required>
-      </div>
-      <div class="field">
-        <label for="altura">Altura em centímetros</label>
-        <input id="altura" type="number" min="100" max="250" placeholder="Ex.: 170" required>
-      </div>
-    </div>
-    <button class="btn-primary" type="submit">CALCULAR MEU IMC</button>
-  </form>
-
-  <div class="result" id="resultado" aria-live="polite">
-    <div class="result-top">
-      <div>
-        <div class="result-label">SEU RESULTADO DO IMC</div>
-        <div class="imc-number" id="imcValor">0,0</div>
-      </div>
-      <div id="imcStatus" class="status green">PESO ADEQUADO</div>
-    </div>
-
+      <div class="field">        <label for="sexo">Sexo para referência do IMC</label>        <select id="sexo" required>          <option value="">Selecione</option>          <option value="masculino">Masculino</option>          <option value="feminino">Feminino</option>        </select>      </div>      <div class="field">        <label for="peso">Peso em kg</label>        <input id="peso" type="number" min="20" max="350" step="0.1" placeholder="Ex.: 75" required>      </div>      <div class="field">        <label for="altura">Altura em centímetros</label>        <input id="altura" type="number" min="100" max="250" placeholder="Ex.: 170" required>      </div>    </div>    <button class="btn-primary" type="submit">CALCULAR MEU IMC</button>  </form>
+  <div class="result" id="resultado" aria-live="polite">    <div class="result-top">      <div>        <div class="result-label">SEU RESULTADO DO IMC</div>        <div class="imc-number" id="imcValor">0,0</div>      </div>      <div id="imcStatus" class="status green">PESO ADEQUADO</div>    </div>
     <p class="result-message" id="mensagem"></p>
-
-    <div id="escalaAdulto">
-      <div class="scale-title">Veja onde seu resultado se encontra:</div>
-      <div class="scale">
-        <span></span><span></span><span></span><span></span><span></span><span></span>
-      </div>
-      <div class="scale-labels">
-        <div class="scale-item" data-category="baixo"><strong>🟠 Abaixo do peso</strong>Menor que 18,5</div>
-        <div class="scale-item" data-category="adequado"><strong>🟢 Peso adequado</strong>18,5 a 24,9</div>
-        <div class="scale-item" data-category="sobrepeso"><strong>🟠 Sobrepeso</strong>25 a 29,9</div>
-        <div class="scale-item" data-category="obesidade1"><strong>🟠 Obesidade I</strong>30 a 34,9</div>
-        <div class="scale-item" data-category="obesidade2"><strong>🔴 Obesidade II</strong>35 a 39,9</div>
-        <div class="scale-item" data-category="obesidade3"><strong>🔴 Obesidade III</strong>40 ou mais</div>
-      </div>
-    </div>
-
-    <div id="avisoAdolescente" style="display:none">
-      <div class="info-box">
-        <strong>💗 Resultado de IMC para adolescente</strong>
-        <p style="margin-top:8px" id="textoAdolescente"></p>
-        <p style="margin-top:8px" id="orientacaoAdolescente"></p>
-      </div>
-    </div>
-
+    <div id="escalaAdulto">      <div class="scale-title">Veja onde seu resultado se encontra:</div>      <div class="scale">        <span></span><span></span><span></span><span></span><span></span><span></span>      </div>      <div class="scale-labels">        <div class="scale-item" data-category="baixo"><strong>🟠 Abaixo do peso</strong>Menor que 18,5</div>        <div class="scale-item" data-category="adequado"><strong>🟢 Peso adequado</strong>18,5 a 24,9</div>        <div class="scale-item" data-category="sobrepeso"><strong>🟠 Sobrepeso</strong>25 a 29,9</div>        <div class="scale-item" data-category="obesidade1"><strong>🟠 Obesidade I</strong>30 a 34,9</div>        <div class="scale-item" data-category="obesidade2"><strong>🔴 Obesidade II</strong>35 a 39,9</div>        <div class="scale-item" data-category="obesidade3"><strong>🔴 Obesidade III</strong>40 ou mais</div>      </div>    </div>
+    <div id="avisoAdolescente" style="display:none">      <div class="info-box">        <strong>💗 Resultado de IMC para adolescente</strong>        <p style="margin-top:8px" id="textoAdolescente"></p>        <p style="margin-top:8px" id="orientacaoAdolescente"></p>      </div>    </div>
     <p class="result-detail" id="detalheResultado">O IMC é um indicador inicial. Ele não avalia sozinho a composição corporal ou o estado geral de saúde.</p>
+    <button class="btn-whatsapp" type="button" onclick="enviarResultado()">ENVIAR RESULTADO PELO WHATSAPP</button>  </div></section>
+<section class="card">  <h2 class="section-title">💗 Cuidar de você é o primeiro passo</h2>  <p class="subtitle">Pequenas atitudes diárias ajudam a construir uma rotina mais saudável.</p>  <div class="tips">    <div class="tip"><strong>💧 Hidratação</strong>Mantenha uma boa ingestão de água ao longo do dia.</div>    <div class="tip"><strong>🥗 Alimentação</strong>Busque uma alimentação variada e equilibrada.</div>    <div class="tip"><strong>🚶 Movimento</strong>Inclua atividades físicas adequadas à sua rotina.</div>    <div class="tip"><strong>😴 Descanso</strong>Valorize uma boa noite de sono.</div>  </div></section>
+<div class="category-heading recommendation-section" id="sec-controle">  <div class="category-icon">⚖️</div>  <div><h2>Controle de peso</h2><p>Conheça ingredientes e suplementos disponíveis na farmácia.</p></div></div>
+<section class="products recommendation-section" id="prod-controle">  <article class="product"><div class="product-icon">🌾</div><h3>Psyllium</h3><p>Fonte de fibras alimentares que auxilia o funcionamento intestinal e pode contribuir para a sensação de saciedade.</p><div class="detail">Complemento para uma rotina rica em fibras e hidratação.</div><button class="btn-whatsapp" onclick="consultar('Psyllium')">Consultar disponibilidade</button></article>  <article class="product"><div class="product-icon">🌿</div><h3>Quitosana</h3><p>Fibra de origem natural utilizada em suplementos alimentares voltados ao cuidado nutricional.</p><div class="detail">Consulte a composição e as orientações do produto.</div><button class="btn-whatsapp" onclick="consultar('Quitosana')">Consultar disponibilidade</button></article>  <article class="product"><div class="product-icon">💚</div><h3>Spirulina</h3><p>Microalga que contém proteínas e diversos nutrientes, presente em suplementos para complementar a alimentação.</p><div class="detail">Conheça as opções disponíveis.</div><button class="btn-whatsapp" onclick="consultar('Spirulina')">Consultar disponibilidade</button></article>  <article class="product"><div class="product-icon">🌱</div><h3>Feno-grego</h3><p>Ingrediente vegetal tradicionalmente utilizado em suplementos e presente em diferentes fórmulas nutricionais.</p><div class="detail">Consulte as apresentações disponíveis em nossa loja.</div><button class="btn-whatsapp" onclick="consultar('Feno-grego')">Consultar disponibilidade</button></article>  <article class="product"><div class="product-icon">🍊</div><h3>Laranja Moro</h3><p>Extrato vegetal presente em suplementos desenvolvidos para complementar estratégias de cuidado com o peso.</p><div class="detail">Conheça as composições disponíveis.</div><button class="btn-whatsapp" onclick="consultar('Laranja Moro')">Consultar disponibilidade</button></article>  <article class="product"><div class="product-icon">✨</div><h3>Picolinato de Cromo</h3><p>Fonte de cromo, mineral que participa do metabolismo de carboidratos, proteínas e gorduras.</p><div class="detail">Uma opção de suplementação desse mineral essencial.</div><button class="btn-whatsapp" onclick="consultar('Picolinato de Cromo')">Consultar disponibilidade</button></article></section>
+<div class="category-heading recommendation-section" id="sec-equilibrio">  <div class="category-icon">🌸</div>  <div><h2>Equilíbrio e manutenção</h2><p>Opções para complementar uma alimentação equilibrada.</p></div></div><section class="products recommendation-section" id="prod-equilibrio">  <article class="product"><div class="product-icon">⚡</div><h3>Complexo B</h3><p>Conjunto de vitaminas importantes para o metabolismo energético e para o funcionamento normal do organismo.</p><div class="detail">Consulte as diferentes apresentações disponíveis.</div><button class="btn-whatsapp" onclick="consultar('Complexo B')">Consultar disponibilidade</button></article>  <article class="product"><div class="product-icon">💚</div><h3>Spirulina</h3><p>Suplemento de origem natural que pode complementar a alimentação com proteínas e outros nutrientes.</p><div class="detail">Conheça as opções disponíveis no Atacadão Farma Centro.</div><button class="btn-whatsapp" onclick="consultar('Spirulina')">Consultar disponibilidade</button></article>  <article class="product"><div class="product-icon">🌿</div><h3>Suplementos nutricionais</h3><p>Opções com diferentes vitaminas, minerais e ingredientes para complementar sua rotina alimentar.</p><div class="detail">Nossa equipe pode ajudar você a localizar os produtos.</div><button class="btn-whatsapp" onclick="consultar('Suplementos nutricionais')">Consultar opções</button></article></section>
+<div class="category-heading recommendation-section" id="sec-ganho">  <div class="category-icon">💪</div>  <div><h2>Apoio ao ganho de peso</h2><p>Conheça opções e converse com um profissional sobre suas necessidades.</p></div></div><section class="products recommendation-section" id="prod-ganho">  <article class="product"><div class="product-icon">🍽️</div><h3>Cobavital</h3><p>Medicamento com indicação relacionada ao estímulo do apetite. Seu uso deve seguir a bula e a orientação de um profissional de saúde.</p><div class="detail">Consulte a disponibilidade e as orientações na farmácia.</div><button class="btn-whatsapp" onclick="consultar('Cobavital')">Consultar na farmácia</button></article>  <article class="product"><div class="product-icon">🥛</div><h3>Complementos nutricionais</h3><p>Existem diferentes opções nutricionais para complementar a alimentação, conforme as necessidades individuais.</p><div class="detail">Nossa equipe pode ajudar você a conhecer as opções.</div><button class="btn-whatsapp" onclick="consultar('Complementos nutricionais')">Consultar opções</button></article></section>
+<section class="card" style="margin-top:30px">  <h2 class="section-title">💬 Conte com o Atacadão Farma Centro!</h2>  <p class="subtitle">Quer saber se temos determinado produto ou consultar uma apresentação? Nossa equipe está pronta para atender.</p>  <button class="btn-whatsapp" onclick="consultar('Atendimento sobre produtos e suplementos')">FALAR COM NOSSA EQUIPE</button>  <div class="info-box">    <strong>Importante:</strong>    As informações desta página são educativas e não substituem avaliação profissional. O IMC não é diagnóstico.    For crianças e adolescentes, a interpretação deve considerar idade e sexo conforme as curvas de crescimento.    Suplementos não são medicamentos e não substituem uma alimentação equilibrada. Medicamentos devem ser utilizados conforme a bula e orientação profissional.    A disponibilidade dos produtos deve ser confirmada com a farmácia.  </div></section></main>
+<footer>  <strong>ATACADÃO FARMA CENTRO</strong>  <p>Drogaria do Péricles</p>  <p>Paranoá – DF</p>  <p style="margin-top:10px">Cuidando de você em cada etapa! 💗</p></footer>
+<script>const WHATSAPP = "5561992186067";let ultimoResultado = null;
+const form = document.getElementById("imcForm");const nascimentoInput = document.getElementById("nascimento");
 
-    <button class="btn-whatsapp" type="button" onclick="enviarResultado()">ENVIAR RESULTADO PELO WHATSAPP</button>
-  </div>
-</section>
-
-<section class="card">
-  <h2 class="section-title">💗 Cuidar de você é o primeiro passo</h2>
-  <p class="subtitle">Pequenas atitudes diárias ajudam a construir uma rotina mais saudável.</p>
-  <div class="tips">
-    <div class="tip"><strong>💧 Hidratação</strong>Mantenha uma boa ingestão de água ao longo do dia.</div>
-    <div class="tip"><strong>🥗 Alimentação</strong>Busque uma alimentação variada e equilibrada.</div>
-    <div class="tip"><strong>🚶 Movimento</strong>Inclua atividades físicas adequadas à sua rotina.</div>
-    <div class="tip"><strong>😴 Descanso</strong>Valorize uma boa noite de sono.</div>
-  </div>
-</section>
-
-<div class="category-heading recommendation-section" id="sec-controle">
-  <div class="category-icon">⚖️</div>
-  <div><h2>Controle de peso</h2><p>Conheça ingredientes e suplementos disponíveis na farmácia.</p></div>
-</div>
-
-<section class="products recommendation-section" id="prod-controle">
-  <article class="product"><div class="product-icon">🌾</div><h3>Psyllium</h3><p>Fonte de fibras alimentares que auxilia o funcionamento intestinal e pode contribuir para a sensação de saciedade.</p><div class="detail">Complemento para uma rotina rica em fibras e hidratação.</div><button class="btn-whatsapp" onclick="consultar('Psyllium')">Consultar disponibilidade</button></article>
-  <article class="product"><div class="product-icon">🌿</div><h3>Quitosana</h3><p>Fibra de origem natural utilizada em suplementos alimentares voltados ao cuidado nutricional.</p><div class="detail">Consulte a composição e as orientações do produto.</div><button class="btn-whatsapp" onclick="consultar('Quitosana')">Consultar disponibilidade</button></article>
-  <article class="product"><div class="product-icon">💚</div><h3>Spirulina</h3><p>Microalga que contém proteínas e diversos nutrientes, presente em suplementos para complementar a alimentação.</p><div class="detail">Conheça as opções disponíveis.</div><button class="btn-whatsapp" onclick="consultar('Spirulina')">Consultar disponibilidade</button></article>
-  <article class="product"><div class="product-icon">🌱</div><h3>Feno-grego</h3><p>Ingrediente vegetal tradicionalmente utilizado em suplementos e presente em diferentes fórmulas nutricionais.</p><div class="detail">Consulte as apresentações disponíveis em nossa loja.</div><button class="btn-whatsapp" onclick="consultar('Feno-grego')">Consultar disponibilidade</button></article>
-  <article class="product"><div class="product-icon">🍊</div><h3>Laranja Moro</h3><p>Extrato vegetal presente em suplementos desenvolvidos para complementar estratégias de cuidado com o peso.</p><div class="detail">Conheça as composições disponíveis.</div><button class="btn-whatsapp" onclick="consultar('Laranja Moro')">Consultar disponibilidade</button></article>
-  <article class="product"><div class="product-icon">✨</div><h3>Picolinato de Cromo</h3><p>Fonte de cromo, mineral que participa do metabolismo de carboidratos, proteínas e gorduras.</p><div class="detail">Uma opção de suplementação desse mineral essencial.</div><button class="btn-whatsapp" onclick="consultar('Picolinato de Cromo')">Consultar disponibilidade</button></article>
-</section>
-
-<div class="category-heading recommendation-section" id="sec-equilibrio">
-  <div class="category-icon">🌸</div>
-  <div><h2>Equilíbrio e manutenção</h2><p>Opções para complementar uma alimentação equilibrada.</p></div>
-</div>
-<section class="products recommendation-section" id="prod-equilibrio">
-  <article class="product"><div class="product-icon">⚡</div><h3>Complexo B</h3><p>Conjunto de vitaminas importantes para o metabolismo energético e para o funcionamento normal do organismo.</p><div class="detail">Consulte as diferentes apresentações disponíveis.</div><button class="btn-whatsapp" onclick="consultar('Complexo B')">Consultar disponibilidade</button></article>
-  <article class="product"><div class="product-icon">💚</div><h3>Spirulina</h3><p>Suplemento de origem natural que pode complementar a alimentação com proteínas e outros nutrientes.</p><div class="detail">Conheça as opções disponíveis no Atacadão Farma Centro.</div><button class="btn-whatsapp" onclick="consultar('Spirulina')">Consultar disponibilidade</button></article>
-  <article class="product"><div class="product-icon">🌿</div><h3>Suplementos nutricionais</h3><p>Opções com diferentes vitaminas, minerais e ingredientes para complementar sua rotina alimentar.</p><div class="detail">Nossa equipe pode ajudar você a localizar os produtos.</div><button class="btn-whatsapp" onclick="consultar('Suplementos nutricionais')">Consultar opções</button></article>
-</section>
-
-<div class="category-heading recommendation-section" id="sec-ganho">
-  <div class="category-icon">💪</div>
-  <div><h2>Apoio ao ganho de peso</h2><p>Conheça opções e converse com um profissional sobre suas necessidades.</p></div>
-</div>
-<section class="products recommendation-section" id="prod-ganho">
-  <article class="product"><div class="product-icon">🍽️</div><h3>Cobavital</h3><p>Medicamento com indicação relacionada ao estímulo do apetite. Seu uso deve seguir a bula e a orientação de um profissional de saúde.</p><div class="detail">Consulte a disponibilidade e as orientações na farmácia.</div><button class="btn-whatsapp" onclick="consultar('Cobavital')">Consultar na farmácia</button></article>
-  <article class="product"><div class="product-icon">🥛</div><h3>Complementos nutricionais</h3><p>Existem diferentes opções nutricionais para complementar a alimentação, conforme as necessidades individuais.</p><div class="detail">Consulte nossa equipe para conhecer as opções.</div><button class="btn-whatsapp" onclick="consultar('Complementos nutricionais')">Consultar opções</button></article>
-</section>
-
-<section class="card" style="margin-top:30px">
-  <h2 class="section-title">💬 Conte com o Atacadão Farma Centro!</h2>
-  <p class="subtitle">Quer saber se temos determinado produto ou consultar uma apresentação? Nossa equipe está pronta para atender.</p>
-  <button class="btn-whatsapp" onclick="consultar('Atendimento sobre produtos e suplementos')">FALAR COM NOSSA EQUIPE</button>
-  <div class="info-box">
-    <strong>Importante:</strong>
-    As informações desta página são educativas e não substituem avaliação profissional. O IMC não é diagnóstico.
-    Para crianças e adolescentes, a interpretação deve considerar idade e sexo conforme as curvas de crescimento.
-    Suplementos não são medicamentos e não substituem uma alimentação equilibrada. Medicamentos devem ser utilizados conforme a bula e orientação profissional.
-    A disponibilidade dos produtos deve ser confirmada com a farmácia.
-  </div>
-</section>
-</main>
-
-<footer>
-  <strong>ATACADÃO FARMA CENTRO</strong>
-  <p>Drogaria do Péricles</p>
-  <p>Paranoá – DF</p>
-  <p style="margin-top:10px">Cuidando de você em cada etapa! 💗</p>
-</footer>
-
-<script>
-const WHATSAPP = "5561992186067";
-let ultimoResultado = null;
-
-const form = document.getElementById("imcForm");
-const nascimentoInput = document.getElementById("nascimento");
-
-function dataLocalHoje(){
-  const hoje = new Date();
-  return hoje.getFullYear() + "-" +
-    String(hoje.getMonth()+1).padStart(2,"0") + "-" +
-    String(hoje.getDate()).padStart(2,"0");
-}
-nascimentoInput.max = dataLocalHoje();
-
-function calcularIdade(data){
-  const hoje = new Date();
-  const nascimento = new Date(data + "T00:00:00");
-  let idade = hoje.getFullYear() - nascimento.getFullYear();
-  const mes = hoje.getMonth() - nascimento.getMonth();
-  if(mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) idade--;
-  return idade;
-}
-
-function idadeEmMeses(data){
-  const hoje = new Date();
-  const nascimento = new Date(data + "T00:00:00");
-  let meses = (hoje.getFullYear()-nascimento.getFullYear())*12 +
-    (hoje.getMonth()-nascimento.getMonth());
-  if(hoje.getDate() < nascimento.getDate()) meses--;
-  return meses;
-}
-
-function esconderRecomendacoes(){
-  document.querySelectorAll(".recommendation-section").forEach(sec => sec.style.display="none");
-}
-
-function mostrarRecomendacoes(grupo){
-  esconderRecomendacoes();
-  document.getElementById("sec-"+grupo).style.display="flex";
-  document.getElementById("prod-"+grupo).style.display="grid";
-}
-
-function limparResultadoAnterior(){
-  document.querySelectorAll(".scale-item").forEach(item => item.classList.remove("active"));
-  esconderRecomendacoes();
-  document.getElementById("resultado").style.display="none";
-  ultimoResultado=null;
-}
-
-form.addEventListener("submit",function(event){
-  event.preventDefault();
-  limparResultadoAnterior();
-
-  const nome=document.getElementById("nome").value.trim();
-  const nascimento=nascimentoInput.value;
-  const sexo=document.getElementById("sexo").value;
-  const peso=Number(document.getElementById("peso").value);
-  const alturaCm=Number(document.getElementById("altura").value);
-
-  if(!nascimento || !sexo){
-    alert("Informe a data de nascimento e o sexo.");
-    return;
+// Máscara automática para formatar DD/MM/AAAA enquanto digita e conversor interno para o formato americano que o script precisa
+nascimentoInput.addEventListener("input", function(e) {
+  let v = e.target.value.replace(/\D/g, "");
+  if (v.length > 8) v = v.slice(0, 8);
+  if (v.length > 4) {
+    v = v.slice(0, 2) + "/" + v.slice(2, 4) + "/" + v.slice(4);
+  } else if (v.length > 2) {
+    v = v.slice(0, 2) + "/" + v.slice(2);
   }
-
-  const idade=calcularIdade(nascimento);
-  const meses=idadeEmMeses(nascimento);
-
-  if(nascimento>dataLocalHoje() || idade<10 || idade>120 ||
-     peso<20 || peso>350 || alturaCm<100 || alturaCm>250 ||
-     !Number.isFinite(peso) || !Number.isFinite(alturaCm)){
-    alert("Confira os dados informados. A calculadora aceita pessoas de 10 a 120 anos.");
-    return;
-  }
-
-  const altura=alturaCm/100;
-  const imc=peso/(altura*altura);
-  const resultado=document.getElementById("resultado");
-  const status=document.getElementById("imcStatus");
-  const mensagem=document.getElementById("mensagem");
-  const escala=document.getElementById("escalaAdulto");
-  const avisoAdolescente=document.getElementById("avisoAdolescente");
-
-  document.getElementById("imcValor").textContent=imc.toFixed(1).replace(".",",");
-
-  if(idade<20){
-    status.textContent="AVALIAÇÃO POR IDADE";
-    status.className="status purple";
-    mensagem.textContent="Seu IMC foi calculado. Para saber se está abaixo, dentro ou acima da faixa esperada, é necessário comparar o resultado com a curva de crescimento da OMS para seu sexo e sua idade exata.";
-
-    escala.style.display="none";
-    avisoAdolescente.style.display="block";
-
-    document.getElementById("textoAdolescente").textContent=
-      "Seu IMC é "+imc.toFixed(1).replace(".",",")+
-      ". Você tem "+idade+" anos e "+meses+
-      " meses. Esse número, sozinho, não permite dizer se seu peso está adequado para sua idade.";
-
-    document.getElementById("orientacaoAdolescente").textContent=
-      "A classificação correta utiliza a referência IMC-por-idade da OMS (5 a 19 anos), com parâmetros diferentes para meninos e meninas. Converse com um profissional de saúde para interpretar sua curva de crescimento. Não utilize a tabela de adultos.";
-
-    document.getElementById("detalheResultado").textContent=
-      "A calculadora não apresenta uma classificação adulta para menores de 20 anos. Nenhuma recomendação comercial de controle ou ganho de peso será exibida.";
-
-    ultimoResultado={
-      nome:nome||"Não informado",
-      idade,meses,sexo,peso,altura:alturaCm,
-      imc:imc.toFixed(1).replace(".",","),
-      categoria:"Avaliação por IMC-para-idade necessária; classificação OMS não calculada nesta versão"
-    };
-  }else{
-    escala.style.display="block";
-    avisoAdolescente.style.display="none";
-
-    let categoria="",mensagemTexto="",classe="",codigo="";
-    if(imc<18.5){
-      categoria="ABAIXO DO PESO";classe="orange";codigo="baixo";
-      mensagemTexto="Seu IMC está abaixo da faixa de referência adulta. Converse com um profissional de saúde para avaliar sua alimentação e suas necessidades nutricionais.";
-    }else if(imc<25){
-      categoria="PESO ADEQUADO";classe="green";codigo="adequado";
-      mensagemTexto="Seu IMC está dentro da faixa de referência adulta. Continue cuidando da alimentação, hidratação, movimento e descanso.";
-    }else if(imc<30){
-      categoria="SOBREPESO";classe="orange";codigo="sobrepeso";
-      mensagemTexto="Seu IMC está na faixa de sobrepeso. Converse com um profissional de saúde sobre seus hábitos e objetivos.";
-    }else if(imc<35){
-      categoria="OBESIDADE GRAU I";classe="orange";codigo="obesidade1";
-      mensagemTexto="Seu IMC está na faixa de obesidade grau I. O acompanhamento profissional pode ajudar a definir cuidados adequados.";
-    }else if(imc<40){
-      categoria="OBESIDADE GRAU II";classe="red";codigo="obesidade2";
-      mensagemTexto="Seu IMC está na faixa de obesidade grau II. Procure acompanhamento profissional para uma avaliação individualizada.";
-    }else{
-      categoria="OBESIDADE GRAU III";classe="red";codigo="obesidade3";
-      mensagemTexto="Seu IMC está na faixa de obesidade grau III. É importante buscar acompanhamento de uma equipe de saúde.";
-    }
-
-    status.textContent=categoria;
-    status.className="status "+classe;
-    mensagem.textContent=mensagemTexto;
-    document.getElementById("detalheResultado").textContent=
-      "O IMC é um indicador inicial e não avalia sozinho a composição corporal ou o estado geral de saúde.";
-
-    document.querySelectorAll(".scale-item").forEach(item=>{
-      item.classList.toggle("active",item.dataset.category===codigo);
-    });
-
-    const grupo=codigo==="baixo"?"ganho":codigo==="adequado"?"equilibrio":"controle";
-    mostrarRecomendacoes(grupo);
-
-    ultimoResultado={
-      nome:nome||"Não informado",idade,sexo,peso,altura:alturaCm,
-      imc:imc.toFixed(1).replace(".",","),categoria
-    };
-  }
-
-  resultado.style.display="block";
-  resultado.scrollIntoView({behavior:"smooth",block:"center"});
+  e.target.value = v;
 });
 
-function consultar(produto){
-  const mensagem="Olá! Acessei o Peso Certo do Atacadão Farma Centro e gostaria de consultar informações e disponibilidade sobre: "+produto+".";
-  abrirWhatsApp(mensagem);
+function obterDataAmericana() {
+  const val = nascimentoInput.value;
+  const partes = val.split("/");
+  if(partes.length === 3 && partes[2].length === 4) {
+    return partes[2] + "-" + partes[1] + "-" + partes[0];
+  }
+  return val;
 }
 
-function enviarResultado(){
-  if(!ultimoResultado)return;
-  const r=ultimoResultado;
-  const mensagem=
-    "Olá! Fiz meu cálculo no Peso Certo do Atacadão Farma Centro.\n\n"+
-    "Nome: "+r.nome+"\n"+
-    "Idade: "+r.idade+" anos"+(r.meses!==undefined?" ("+r.meses+" meses)":"")+"\n"+
-    "Sexo de referência: "+r.sexo+"\n"+
-    "Peso: "+r.peso+" kg\n"+
-    "Altura: "+r.altura+" cm\n"+
-    "IMC: "+r.imc+"\n"+
-    "Classificação: "+r.categoria+"\n\n"+
-    "Gostaria de conversar com a equipe.";
-  abrirWhatsApp(mensagem);
-}
+function dataLocalHoje(){  const hoje = new Date();  return String(hoje.getDate()).padStart(2,"0") + "/" +    String(hoje.getMonth()+1).padStart(2,"0") + "/" +    hoje.getFullYear();}
 
-function abrirWhatsApp(mensagem){
-  const url="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(mensagem);
-  window.open(url,"_blank");
-}
-</script>
-</body>
-</html>
+function calcularIdade(data){  const hoje = new Date();  const nascimento = new Date(data + "T00:00:00");  let idade = hoje.getFullYear() - nascimento.getFullYear();  const mes = hoje.getMonth() - nascimento.getMonth();  if(mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) idade--;  return idade;}
+function idadeEmMeses(data){  const hoje = new Date();  const nascimento = new Date(data + "T00:00:00");  let meses = (hoje.getFullYear()-nascimento.getFullYear())*12 +    (hoje.getMonth()-nascimento.getMonth());  if(hoje.getDate() < nascimento.getDate()) meses--;  return meses;}
+function esconderRecomendacoes(){  document.querySelectorAll(".recommendation-section").forEach(sec => sec.style.display="none");}
+function mostrarRecomendacoes(grupo){  esconderRecomendacoes();  document.getElementById("sec-"+grupo).style.display="flex";  document.getElementById("prod-"+grupo).style.display="grid";}
+function limparResultadoAnterior(){  document.querySelectorAll(".scale-item").forEach(item => item.classList.remove("active"));  esconderRecomendacoes();  document.getElementById("resultado").style.display="none";  ultimoResultado=null;}
+form.addEventListener("submit",function(event){  event.preventDefault();  limparResultadoAnterior();
+
+  const nome=document.getElementById("nome").value.trim();  const nascimentoFormatado = obterDataAmericana();  const nascimento=nascimentoFormatado;  const sexo=document.getElementById("sexo").value;  const peso=Number(document.getElementById("peso").value);  const alturaCm=Number(document.getElementById("altura").value);
+
+  if(!nascimento || !sexo || nascimento.length < 10){    alert("Informe a data de nascimento completa no formato DD/MM/AAAA e o sexo.");    return;  }
+
+  const idade=calcularIdade(nascimento);  const meses=idadeEmMeses(nascimento);
+
+  const hojeStr = new Date().toISOString().split("T")[0];
+  if(nascimento>hojeStr || idade<10 || idade>120 ||     peso<20 || peso>350 || alturaCm<100 || alturaCm>250 ||     !Number.isFinite(peso) || !Number.isFinite(alturaCm)){    alert("Confira os dados informados. A calculadora aceita pessoas de 10 a 120 anos.");    return;  }
+
+  const altura=alturaCm/100;  const imc=peso/(altura*altura);  const resultado=document.getElementById("resultado");  const status=document.getElementById("imcStatus");  const mensagem=document.getElementById("mensagem");  const escala=document.getElementById("escalaAdulto");  const avisoAdolescente=document.getElementById("avisoAdolescente");
+
+  document.getElementById("imcValor").textContent=imc.toFixed(1).replace(".",",");
+  if(idade<20){    status.textContent="AVALIAÇÃO POR IDADE";    status.className="status purple";    mensagem.textContent="Seu IMC foi calculado. Para saber se está abaixo, dentro ou acima da faixa esperada, é necessário comparar o resultado com a curva de crescimento da OMS para seu sexo e sua idade exata.";
+    escala.style.display="none";    avisoAdolescente.style.display="block";
+
+    document.getElementById("textoAdolescente").textContent=      "Seu IMC é "+imc.toFixed(1).replace(".",",")+      ". Você tem "+idade+" anos e "+meses+      " meses. Esse número, sozinho, não permite dizer se seu peso está adequado para sua idade.";
+    document.getElementById("orientacaoAdolescente").textContent=      "A classificação correta utiliza a referência IMC-por-idade da OMS (5 a 19 anos), com parâmetros diferentes para meninos e meninas. Converse com um profissional de saúde para interpretar sua curva de crescimento. Não utilize a tabela de adultos.";
+    document.getElementById("detalheResultado").textContent=      "A calculadora não apresenta uma classificação adulta para menores de 20 anos. Nenhuma recomendação comercial de controle ou ganho de peso será exibida.";
+    ultimoResultado={      nome:nome||"Não informado",      idade,meses,sexo,peso,altura:alturaCm,      imc:imc.toFixed(1).replace(".",","),      categoria:"Avaliação por IMC-para-idade necessária; classificação OMS não calculada nesta versão"    };  }else{    escala.style.display="block";    avisoAdolescente.style.display="none";
+
+    let categoria="",mensagemTexto="",classe="",codigo="";    if(imc<18.5){      categoria="ABAIXO DO PESO";classe="orange";codigo="baixo";      mensagemTexto="Seu IMC está abaixo da faixa de referência adulta. Converse com um profissional de saúde para avaliar sua alimentação e suas necessidades nutricionais.";    }else if(imc<25){      categoria="PESO ADEQUADO";classe="green";codigo="adequado";      mensagemTexto="Seu IMC está dentro da faixa de referência adulta. Continue cuidando da alimentação, hidratação, movimento e descanso.";    }else if(imc<30){      categoria="SOBREPESO";classe="orange";codigo="sobrepeso";      mensagemTexto="Seu IMC está na faixa de sobrepeso. Converse com um profissional de saúde sobre seus hábitos e objetivos.";    }else if(imc<35){      categoria="OBESIDADE GRAU I";classe="orange";codigo="obesidade1";      mensagemTexto="Seu IMC está na faixa de obesidade grau I. O acompanhamento profissional pode ajudar a definir cuidados adequados.";    }else if(imc<40){      categoria="OBESIDADE GRAU II";classe="red";codigo="obesidade2";      mensagemTexto="Seu IMC está na faixa de obesidade grau II. Procure acompanhamento profissional para uma avaliação individualizada.";    }else{      categoria="OBESIDADE GRAU III";classe="red";codigo="obesidade3";      mensagemTexto="Seu IMC está na faixa de obesidade grau III. É importante buscar acompanhamento de uma equipe de saúde.";    }
+
+    status.textContent=categoria;    status.className="status "+classe;    mensagem.textContent=mensagemTexto;    document.getElementById("detalheResultado").textContent=      "O IMC é um indicador inicial e não avalia sozinho a composição corporal ou o estado geral de saúde.";
+    document.querySelectorAll(".scale-item").forEach(item=>{      item.classList.toggle("active",item.dataset.category===codigo);    });
+
+    const grupo=codigo==="baixo"?"ganho":codigo==="adequado"?"equilibrio":"controle";    mostrarRecomendacoes(grupo);
+
+    ultimoResultado={      nome:nome||"Não informado",idade,sexo,peso,altura:alturaCm,      imc:imc.toFixed(1).replace(".",","),categoria    };  }
+
+  resultado.style.display="block";  resultado.scrollIntoView({behavior:"smooth",block:"center"});});
+
+function consultar(produto){  const mensagem="Olá! Acessei o Peso Certo do Atacadão Farma Centro e gostaria de consultar informações e disponibilidade sobre: "+produto+".";  abrirWhatsApp(mensagem);}
+function enviarResultado(){  if(!ultimoResultado)return;  const r=ultimoResultado;  const mensagem=    "Olá! Fiz meu cálculo no Peso Certo do Atacadão Farma Centro.\n\n"+    "Nome: "+r.nome+"\n"+    "Idade: "+r.idade+" anos"+(r.meses!==undefined?" ("+r.meses+" meses)":"")+"\n"+    "Sexo de referência: "+r.sexo+"\n"+    "Peso: "+r.peso+" kg\n"+    "Altura: "+r.altura+" cm\n"+    "IMC: "+r.imc+"\n"+    "Classificação: "+r.categoria+"\n\n"+    "Gostaria de conversar com a equipe.";  abrirWhatsApp(mensagem);}
+function abrirWhatsApp(mensagem){  const url="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(mensagem);  window.open(url,"_blank");}</script></body></html>
