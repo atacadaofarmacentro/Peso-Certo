@@ -16,23 +16,16 @@
   --text:#33313a;
   --muted:#77717c;
   --border:#f1dce6;
-  --green:#188b58;
-  --orange:#d58a16;
-  --red:#d94343;
   --shadow:0 8px 25px rgba(100,35,70,.08);
 }
 
-* {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+* {box-sizing:border-box;margin:0;padding:0}
 
 body {
   font-family:Arial,Helvetica,sans-serif;
   background:#fff8fb;
   color:var(--text);
-  line-height:1.55;
+  line-height:1.6;
 }
 
 header {
@@ -44,7 +37,7 @@ header {
 }
 
 .brand {
-  font-size:13px;
+  font-size:15px;
   font-weight:bold;
   letter-spacing:1.5px;
   margin-bottom:15px;
@@ -58,7 +51,7 @@ header h1 {
 header p {
   max-width:570px;
   margin:auto;
-  font-size:15px;
+  font-size:17px;
 }
 
 .container {
@@ -68,7 +61,7 @@ header p {
 
 .card {
   background:white;
-  padding:23px;
+  padding:26px;
   border-radius:19px;
   box-shadow:var(--shadow);
   margin-bottom:22px;
@@ -77,13 +70,13 @@ header p {
 
 .section-title {
   color:var(--pink-dark);
-  font-size:22px;
-  margin-bottom:8px;
+  font-size:25px;
+  margin-bottom:10px;
 }
 
 .subtitle {
   color:var(--muted);
-  font-size:14px;
+  font-size:16px;
   margin-bottom:20px;
 }
 
@@ -99,12 +92,10 @@ header p {
   gap:7px;
 }
 
-.field.full {
-  grid-column:1/-1;
-}
+.field.full {grid-column:1/-1}
 
 label {
-  font-size:13px;
+  font-size:15px;
   font-weight:bold;
 }
 
@@ -128,13 +119,11 @@ button {
   font-weight:bold;
   border-radius:12px;
   padding:14px 18px;
-  font-size:14px;
+  font-size:16px;
   transition:.2s;
 }
 
-button:hover {
-  transform:translateY(-2px);
-}
+button:hover {transform:translateY(-2px)}
 
 .btn-primary {
   width:100%;
@@ -143,9 +132,16 @@ button:hover {
   margin-top:18px;
 }
 
-.btn-primary:hover {
-  background:var(--pink-dark);
+.btn-primary:hover {background:var(--pink-dark)}
+
+.btn-whatsapp {
+  background:#1eae68;
+  color:white;
+  width:100%;
+  margin-top:14px;
 }
+
+.btn-whatsapp:hover {background:#168d53}
 
 /* RESULTADO */
 
@@ -168,7 +164,7 @@ button:hover {
 
 .result-label {
   color:var(--muted);
-  font-size:13px;
+  font-size:15px;
   font-weight:bold;
 }
 
@@ -183,41 +179,28 @@ button:hover {
   display:inline-block;
   padding:9px 14px;
   border-radius:30px;
-  font-size:13px;
+  font-size:15px;
   font-weight:bold;
   margin:12px 0;
 }
 
-.status.green {
-  background:#e3f7ec;
-  color:#137447;
-}
-
-.status.orange {
-  background:#fff1d8;
-  color:#9b6200;
-}
-
-.status.red {
-  background:#ffe5e5;
-  color:#b52b2b;
-}
+.status.green {background:#e3f7ec;color:#137447}
+.status.orange {background:#fff1d8;color:#9b6200}
+.status.red {background:#ffe5e5;color:#b52b2b}
 
 .result-message {
-  font-size:14px;
-  margin-bottom:8px;
+  font-size:16px;
+  margin-bottom:10px;
 }
 
 .result-detail {
   color:var(--muted);
-  font-size:12px;
-  margin-top:8px;
+  font-size:14px;
+  margin-top:10px;
 }
 
-/* ESCALA */
-
 .scale-title {
-  font-size:13px;
+  font-size:15px;
   font-weight:bold;
   margin:22px 0 9px;
 }
@@ -231,35 +214,12 @@ button:hover {
   background:#eee;
 }
 
-.scale span:nth-child(1) {
-  background:#e6a23c;
-  flex:1;
-}
-
-.scale span:nth-child(2) {
-  background:#20a76a;
-  flex:1.5;
-}
-
-.scale span:nth-child(3) {
-  background:#e6a23c;
-  flex:1;
-}
-
-.scale span:nth-child(4) {
-  background:#ed854b;
-  flex:1;
-}
-
-.scale span:nth-child(5) {
-  background:#df5555;
-  flex:1;
-}
-
-.scale span:nth-child(6) {
-  background:#a72f43;
-  flex:1;
-}
+.scale span:nth-child(1) {background:#e6a23c;flex:1}
+.scale span:nth-child(2) {background:#20a76a;flex:1.5}
+.scale span:nth-child(3) {background:#e6a23c;flex:1}
+.scale span:nth-child(4) {background:#ed854b;flex:1}
+.scale span:nth-child(5) {background:#df5555;flex:1}
+.scale span:nth-child(6) {background:#a72f43;flex:1}
 
 .scale-labels {
   display:grid;
@@ -269,8 +229,8 @@ button:hover {
 }
 
 .scale-item {
-  font-size:11px;
-  padding:8px;
+  font-size:14px;
+  padding:10px;
   border-radius:8px;
   background:#f8f5f7;
 }
@@ -285,15 +245,26 @@ button:hover {
   background:var(--pink-light);
 }
 
-.btn-whatsapp {
-  background:#1eae68;
-  color:white;
-  width:100%;
-  margin-top:14px;
+/* CONTEÚDO */
+
+.tips {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:15px;
 }
 
-.btn-whatsapp:hover {
-  background:#168d53;
+.tip {
+  background:#fff7fa;
+  border-radius:12px;
+  padding:15px;
+  font-size:15px;
+}
+
+.tip strong {
+  display:block;
+  color:var(--pink-dark);
+  margin-bottom:5px;
 }
 
 .category-heading {
@@ -315,12 +286,12 @@ button:hover {
 
 .category-heading h2 {
   color:var(--pink-dark);
-  font-size:21px;
+  font-size:23px;
 }
 
 .category-heading p {
   color:var(--muted);
-  font-size:13px;
+  font-size:15px;
 }
 
 .products {
@@ -333,7 +304,7 @@ button:hover {
   background:white;
   border:1px solid var(--border);
   border-radius:17px;
-  padding:18px;
+  padding:22px;
   box-shadow:var(--shadow);
   display:flex;
   flex-direction:column;
@@ -346,46 +317,25 @@ button:hover {
 
 .product h3 {
   color:var(--purple);
-  font-size:17px;
-  margin-bottom:7px;
+  font-size:19px;
+  margin-bottom:9px;
 }
 
 .product p {
-  font-size:13px;
+  font-size:16px;
+  line-height:1.6;
   color:#625c66;
   margin-bottom:10px;
 }
 
 .product .detail {
-  font-size:12px;
+  font-size:14px;
   color:var(--muted);
   margin-top:auto;
   padding-top:8px;
 }
 
-.product button {
-  font-size:13px;
-}
-
-.tips {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  margin-top:15px;
-}
-
-.tip {
-  background:#fff7fa;
-  border-radius:12px;
-  padding:15px;
-  font-size:13px;
-}
-
-.tip strong {
-  display:block;
-  color:var(--pink-dark);
-  margin-bottom:5px;
-}
+.product button {font-size:15px}
 
 .info-box {
   background:#f8f2fb;
@@ -393,7 +343,7 @@ button:hover {
   border-radius:10px;
   padding:16px;
   margin-top:18px;
-  font-size:13px;
+  font-size:15px;
 }
 
 footer {
@@ -401,12 +351,14 @@ footer {
   background:#342b37;
   color:white;
   padding:27px 18px;
-  font-size:13px;
+  font-size:15px;
 }
 
-footer strong {
-  color:#ff91c2;
-}
+footer strong {color:#ff91c2}
+
+/* OCULTAR RECOMENDAÇÕES ATÉ CALCULAR */
+
+.recommendation-section {display:none}
 
 @media(max-width:600px) {
   .form-grid,
@@ -415,17 +367,13 @@ footer strong {
     grid-template-columns:1fr;
   }
 
-  .card {
-    padding:18px;
-  }
-
-  header {
-    padding:30px 15px 38px;
-  }
-
-  .scale-labels {
-    grid-template-columns:repeat(2,1fr);
-  }
+  .card {padding:20px}
+  .section-title {font-size:23px}
+  .subtitle {font-size:15px}
+  .scale-item {font-size:13px}
+  .product p {font-size:15px}
+  header {padding:30px 15px 38px}
+  .scale-labels {grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -444,36 +392,42 @@ footer strong {
 <main class="container">
 
 <section class="card">
+
   <h2 class="section-title">📊 Calculadora de IMC</h2>
+
   <p class="subtitle">
     Informe seus dados e descubra sua classificação de Índice de Massa Corporal.
     Calculadora destinada a adultos a partir de 20 anos.
   </p>
 
   <form id="imcForm">
+
     <div class="form-grid">
 
       <div class="field full">
         <label for="nome">Seu nome (opcional)</label>
-        <input id="nome" type="text" placeholder="Como podemos chamar você?">
+        <input id="nome" type="text"
+        placeholder="Como podemos chamar você?">
       </div>
 
       <div class="field">
         <label for="idade">Idade</label>
-        <input id="idade" type="number" min="20" max="120"
-          placeholder="Ex.: 35" required>
+        <input id="idade" type="number"
+        min="20" max="120" placeholder="Ex.: 35" required>
       </div>
 
       <div class="field">
         <label for="peso">Peso em kg</label>
-        <input id="peso" type="number" min="20" max="350"
-          step="0.1" placeholder="Ex.: 75" required>
+        <input id="peso" type="number"
+        min="20" max="350" step="0.1"
+        placeholder="Ex.: 75" required>
       </div>
 
       <div class="field full">
         <label for="altura">Altura em centímetros</label>
-        <input id="altura" type="number" min="100" max="250"
-          placeholder="Ex.: 170" required>
+        <input id="altura" type="number"
+        min="100" max="250"
+        placeholder="Ex.: 170" required>
       </div>
 
     </div>
@@ -481,6 +435,7 @@ footer strong {
     <button class="btn-primary" type="submit">
       CALCULAR MEU IMC
     </button>
+
   </form>
 
   <div class="result" id="resultado" aria-live="polite">
@@ -490,6 +445,7 @@ footer strong {
         <div class="result-label">SEU RESULTADO DO IMC</div>
         <div class="imc-number" id="imcValor">0,0</div>
       </div>
+
       <div id="imcStatus" class="status green">
         PESO ADEQUADO
       </div>
@@ -497,18 +453,16 @@ footer strong {
 
     <p class="result-message" id="mensagem"></p>
 
-    <div class="scale-title">Veja onde seu resultado se encontra:</div>
-
-    <div class="scale">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="scale-title">
+      Veja onde seu resultado se encontra:
     </div>
 
-    <div class="scale-labels" id="scaleLabels">
+    <div class="scale">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="scale-labels">
 
       <div class="scale-item" data-category="baixo">
         <strong>🟠 Abaixo do peso</strong>
@@ -555,12 +509,17 @@ footer strong {
 </section>
 
 <section class="card">
-  <h2 class="section-title">💗 Cuidar de você é o primeiro passo</h2>
+
+  <h2 class="section-title">
+    💗 Cuidar de você é o primeiro passo
+  </h2>
+
   <p class="subtitle">
     Pequenas atitudes diárias ajudam a construir uma rotina mais saudável.
   </p>
 
   <div class="tips">
+
     <div class="tip">
       <strong>💧 Hidratação</strong>
       Mantenha uma boa ingestão de água ao longo do dia.
@@ -580,18 +539,26 @@ footer strong {
       <strong>😴 Descanso</strong>
       Valorize uma boa noite de sono.
     </div>
+
   </div>
 </section>
 
-<div class="category-heading">
+<!-- CONTROLE DE PESO -->
+
+<div class="category-heading recommendation-section"
+id="sec-controle">
+
   <div class="category-icon">⚖️</div>
+
   <div>
     <h2>Controle de peso</h2>
     <p>Conheça ingredientes e suplementos disponíveis na farmácia.</p>
   </div>
+
 </div>
 
-<section class="products">
+<section class="products recommendation-section"
+id="prod-controle">
 
   <article class="product">
     <div class="product-icon">🌾</div>
@@ -600,8 +567,11 @@ footer strong {
       Fonte de fibras alimentares que auxilia o funcionamento intestinal
       e pode contribuir para a sensação de saciedade.
     </p>
-    <div class="detail">Complemento para uma rotina rica em fibras e hidratação.</div>
-    <button class="btn-whatsapp" onclick="consultar('Psyllium')">
+    <div class="detail">
+      Complemento para uma rotina rica em fibras e hidratação.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Psyllium')">
       Consultar disponibilidade
     </button>
   </article>
@@ -613,8 +583,11 @@ footer strong {
       Fibra de origem natural utilizada em suplementos alimentares
       voltados ao cuidado nutricional.
     </p>
-    <div class="detail">Consulte a composição e as orientações do produto.</div>
-    <button class="btn-whatsapp" onclick="consultar('Quitosana')">
+    <div class="detail">
+      Consulte a composição e as orientações do produto.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Quitosana')">
       Consultar disponibilidade
     </button>
   </article>
@@ -627,7 +600,8 @@ footer strong {
       presente em suplementos para complementar a alimentação.
     </p>
     <div class="detail">Conheça as opções disponíveis.</div>
-    <button class="btn-whatsapp" onclick="consultar('Spirulina')">
+    <button class="btn-whatsapp"
+    onclick="consultar('Spirulina')">
       Consultar disponibilidade
     </button>
   </article>
@@ -639,8 +613,11 @@ footer strong {
       Ingrediente vegetal tradicionalmente utilizado em suplementos
       e presente em diferentes fórmulas nutricionais.
     </p>
-    <div class="detail">Consulte as apresentações disponíveis em nossa loja.</div>
-    <button class="btn-whatsapp" onclick="consultar('Feno-grego')">
+    <div class="detail">
+      Consulte as apresentações disponíveis em nossa loja.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Feno-grego')">
       Consultar disponibilidade
     </button>
   </article>
@@ -653,7 +630,8 @@ footer strong {
       complementar estratégias de cuidado com o peso.
     </p>
     <div class="detail">Conheça as composições disponíveis.</div>
-    <button class="btn-whatsapp" onclick="consultar('Laranja Moro')">
+    <button class="btn-whatsapp"
+    onclick="consultar('Laranja Moro')">
       Consultar disponibilidade
     </button>
   </article>
@@ -665,23 +643,33 @@ footer strong {
       Fonte de cromo, mineral que participa do metabolismo de
       carboidratos, proteínas e gorduras.
     </p>
-    <div class="detail">Uma opção de suplementação desse mineral essencial.</div>
-    <button class="btn-whatsapp" onclick="consultar('Picolinato de Cromo')">
+    <div class="detail">
+      Uma opção de suplementação desse mineral essencial.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Picolinato de Cromo')">
       Consultar disponibilidade
     </button>
   </article>
 
 </section>
 
-<div class="category-heading">
+<!-- PESO ADEQUADO -->
+
+<div class="category-heading recommendation-section"
+id="sec-equilibrio">
+
   <div class="category-icon">🌸</div>
+
   <div>
     <h2>Equilíbrio e manutenção</h2>
     <p>Opções para complementar uma alimentação equilibrada.</p>
   </div>
+
 </div>
 
-<section class="products">
+<section class="products recommendation-section"
+id="prod-equilibrio">
 
   <article class="product">
     <div class="product-icon">⚡</div>
@@ -690,8 +678,11 @@ footer strong {
       Conjunto de vitaminas importantes para o metabolismo energético
       e para o funcionamento normal do organismo.
     </p>
-    <div class="detail">Consulte as diferentes apresentações disponíveis.</div>
-    <button class="btn-whatsapp" onclick="consultar('Complexo B')">
+    <div class="detail">
+      Consulte as diferentes apresentações disponíveis.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Complexo B')">
       Consultar disponibilidade
     </button>
   </article>
@@ -703,8 +694,11 @@ footer strong {
       Suplemento de origem natural que pode complementar a alimentação
       com proteínas e outros nutrientes.
     </p>
-    <div class="detail">Conheça as opções disponíveis no Atacadão Farma Centro.</div>
-    <button class="btn-whatsapp" onclick="consultar('Spirulina')">
+    <div class="detail">
+      Conheça as opções disponíveis no Atacadão Farma Centro.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Spirulina')">
       Consultar disponibilidade
     </button>
   </article>
@@ -716,23 +710,35 @@ footer strong {
       Opções com diferentes vitaminas, minerais e ingredientes
       para complementar sua rotina alimentar.
     </p>
-    <div class="detail">Nossa equipe pode ajudar você a localizar os produtos.</div>
-    <button class="btn-whatsapp" onclick="consultar('Suplementos nutricionais')">
+    <div class="detail">
+      Nossa equipe pode ajudar você a localizar os produtos.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Suplementos nutricionais')">
       Consultar opções
     </button>
   </article>
 
 </section>
 
-<div class="category-heading">
+<!-- ABAIXO DO PESO -->
+
+<div class="category-heading recommendation-section"
+id="sec-ganho">
+
   <div class="category-icon">💪</div>
+
   <div>
     <h2>Apoio ao ganho de peso</h2>
-    <p>Conheça opções e converse com um profissional sobre suas necessidades.</p>
+    <p>
+      Conheça opções e converse com um profissional sobre suas necessidades.
+    </p>
   </div>
+
 </div>
 
-<section class="products">
+<section class="products recommendation-section"
+id="prod-ganho">
 
   <article class="product">
     <div class="product-icon">🍽️</div>
@@ -741,8 +747,11 @@ footer strong {
       Medicamento com indicação relacionada ao estímulo do apetite.
       Seu uso deve seguir a bula e a orientação de um profissional de saúde.
     </p>
-    <div class="detail">Consulte a disponibilidade e as orientações na farmácia.</div>
-    <button class="btn-whatsapp" onclick="consultar('Cobavital')">
+    <div class="detail">
+      Consulte a disponibilidade e as orientações na farmácia.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Cobavital')">
       Consultar na farmácia
     </button>
   </article>
@@ -754,8 +763,11 @@ footer strong {
       Existem diferentes opções nutricionais para complementar a alimentação,
       conforme as necessidades individuais.
     </p>
-    <div class="detail">Consulte nossa equipe para conhecer as opções.</div>
-    <button class="btn-whatsapp" onclick="consultar('Complementos nutricionais')">
+    <div class="detail">
+      Consulte nossa equipe para conhecer as opções.
+    </div>
+    <button class="btn-whatsapp"
+    onclick="consultar('Complementos nutricionais')">
       Consultar opções
     </button>
   </article>
@@ -763,14 +775,18 @@ footer strong {
 </section>
 
 <section class="card" style="margin-top:30px">
-  <h2 class="section-title">💬 Conte com o Atacadão Farma Centro!</h2>
+
+  <h2 class="section-title">
+    💬 Conte com o Atacadão Farma Centro!
+  </h2>
+
   <p class="subtitle">
     Quer saber se temos determinado produto ou consultar uma apresentação?
     Nossa equipe está pronta para atender.
   </p>
 
   <button class="btn-whatsapp"
-    onclick="consultar('Atendimento sobre produtos e suplementos')">
+  onclick="consultar('Atendimento sobre produtos e suplementos')">
     FALAR COM NOSSA EQUIPE
   </button>
 
@@ -782,6 +798,7 @@ footer strong {
     orientação profissional. A disponibilidade dos produtos deve ser
     confirmada com a farmácia.
   </div>
+
 </section>
 
 </main>
@@ -790,16 +807,20 @@ footer strong {
   <strong>ATACADÃO FARMA CENTRO</strong>
   <p>Drogaria do Péricles</p>
   <p>Paranoá – DF</p>
-  <p style="margin-top:10px">Cuidando de você em cada etapa! 💗</p>
+  <p style="margin-top:10px">
+    Cuidando de você em cada etapa! 💗
+  </p>
 </footer>
 
 <script>
+
 const WHATSAPP = "5561992186067";
 let ultimoResultado = null;
 
 const form = document.getElementById("imcForm");
 
 form.addEventListener("submit", function(event) {
+
   event.preventDefault();
 
   const nome = document.getElementById("nome").value.trim();
@@ -825,41 +846,59 @@ form.addEventListener("submit", function(event) {
   let codigo = "";
 
   if (imc < 18.5) {
+
     categoria = "ABAIXO DO PESO";
     classe = "orange";
     codigo = "baixo";
+
     mensagem =
       "Seu IMC está abaixo da faixa de referência. Vale conversar com um profissional de saúde para avaliar sua alimentação e suas necessidades nutricionais.";
+
   } else if (imc < 25) {
+
     categoria = "PESO ADEQUADO";
     classe = "green";
     codigo = "adequado";
+
     mensagem =
       "Seu IMC está dentro da faixa de referência. Continue cuidando da alimentação, hidratação, movimento e descanso.";
+
   } else if (imc < 30) {
+
     categoria = "SOBREPESO";
     classe = "orange";
     codigo = "sobrepeso";
+
     mensagem =
       "Seu IMC está na faixa de sobrepeso. Converse com um profissional de saúde sobre seus hábitos e objetivos.";
+
   } else if (imc < 35) {
+
     categoria = "OBESIDADE GRAU I";
     classe = "orange";
     codigo = "obesidade1";
+
     mensagem =
       "Seu IMC está na faixa de obesidade grau I. O acompanhamento profissional pode ajudar a definir cuidados adequados.";
+
   } else if (imc < 40) {
+
     categoria = "OBESIDADE GRAU II";
     classe = "red";
     codigo = "obesidade2";
+
     mensagem =
       "Seu IMC está na faixa de obesidade grau II. Procure acompanhamento profissional para uma avaliação individualizada.";
+
   } else {
+
     categoria = "OBESIDADE GRAU III";
     classe = "red";
     codigo = "obesidade3";
+
     mensagem =
       "Seu IMC está na faixa de obesidade grau III. É importante buscar acompanhamento de uma equipe de saúde.";
+
   }
 
   ultimoResultado = {
@@ -875,36 +914,74 @@ form.addEventListener("submit", function(event) {
     imc.toFixed(1).replace(".", ",");
 
   const status = document.getElementById("imcStatus");
+
   status.textContent = categoria;
   status.className = "status " + classe;
 
   document.getElementById("mensagem").textContent = mensagem;
 
   document.querySelectorAll(".scale-item").forEach(item => {
+
     item.classList.toggle(
       "active",
       item.dataset.category === codigo
     );
+
   });
 
   const resultado = document.getElementById("resultado");
+
   resultado.style.display = "block";
+
+  // ESCONDE TODAS AS RECOMENDAÇÕES
+
+  document.querySelectorAll(".recommendation-section").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+  // ESCOLHE O CONTEÚDO CONFORME O IMC
+
+  let grupo;
+
+  if (codigo === "baixo") {
+
+    grupo = "ganho";
+
+  } else if (codigo === "adequado") {
+
+    grupo = "equilibrio";
+
+  } else {
+
+    grupo = "controle";
+
+  }
+
+  // MOSTRA SOMENTE A CATEGORIA CORRESPONDENTE
+
+  document.getElementById("sec-" + grupo).style.display = "flex";
+
+  document.getElementById("prod-" + grupo).style.display = "grid";
 
   resultado.scrollIntoView({
     behavior:"smooth",
     block:"center"
   });
+
 });
 
 function consultar(produto) {
+
   const mensagem =
     "Olá! Acessei o Peso Certo do Atacadão Farma Centro e gostaria de consultar informações e disponibilidade sobre: " +
     produto + ".";
 
   abrirWhatsApp(mensagem);
+
 }
 
 function enviarResultado() {
+
   if (!ultimoResultado) return;
 
   const r = ultimoResultado;
@@ -920,15 +997,19 @@ function enviarResultado() {
     "Gostaria de conversar com a equipe.";
 
   abrirWhatsApp(mensagem);
+
 }
 
 function abrirWhatsApp(mensagem) {
+
   const url =
     "https://wa.me/" + WHATSAPP +
     "?text=" + encodeURIComponent(mensagem);
 
   window.open(url, "_blank");
+
 }
+
 </script>
 
 </body>
