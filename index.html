@@ -1,26 +1,360 @@
-<div class="field full">
-  <label for="nascimento">Data de nascimento</label>
-  <input id="nascimento" type="date"
-    min="1900-01-01" required>
-</div>
+<script>
 
-<div class="field">
-  <label for="sexo">Sexo para referência do IMC</label>
-  <select id="sexo" required>
-    <option value="">Selecione</option>
-    <option value="male">Masculino</option>
-    <option value="female">Feminino</option>
-  </select>
-</div>
+const WHATSAPP = "5561992186067";
 
-<div class="field">
-  <label for="peso">Peso em kg</label>
-  <input id="peso" type="number" min="20" max="350"
-    step="0.1" placeholder="Ex.: 75" required>
-</div>
+let ultimoResultado = null;
 
-<div class="field full">
-  <label for="altura">Altura em centímetros</label>
-  <input id="altura" type="number" min="100" max="250"
-    placeholder="Ex.: 170" required>
-</div>
+const form = document.getElementById("imcForm");
+
+const nascimentoInput = document.getElementById("nascimento");
+
+// Impede datas futuras
+nascimentoInput.max = new Date().toISOString().split("T")[0];
+
+function calcularIdade(data) {
+
+  const hoje = new Date();
+  const nascimento = new Date(data + "T00:00:00");
+
+  let idade = hoje.getFullYear() - nascimento.getFullYear();
+
+  const mes = hoje.getMonth() - nascimento.getMonth();
+
+  if (
+    mes < 0 ||
+    (mes === 0 && hoje.getDate() < nascimento.getDate())
+  ) {
+    idade--;
+  }
+
+  return idade;
+}
+
+function idadeEmMeses(data) {
+
+  const hoje = new Date();
+  const nascimento = new Date(data + "T00:00:00");
+
+  let meses =
+    (hoje.getFullYear() - nascimento.getFullYear()) * 12 +
+    (hoje.getMonth() - nascimento.getMonth());
+
+  if (hoje.getDate() < nascimento.getDate()) {
+    meses--;
+  }
+
+  return meses;
+}
+
+function esconderRecomendacoes() {
+
+  document.querySelectorAll(".recommendation-section").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+}
+
+function mostrarRecomendacoes(grupo) {
+
+  esconderRecomendacoes();
+
+  document.getElementById("sec-" + grupo).style.display = "flex";
+
+  document.getElementById("prod-" + grupo).style.display = "grid";
+
+}
+
+form.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const nome = document.getElementById("nome").value.trim();
+
+  const nascimento = nascimentoInput.value;
+
+  const sexo = document.getElementById("sexo").value;
+
+  const peso = Number(document.getElementById("peso").value);
+
+  const alturaCm = Number(document.getElementById("altura").value);
+
+  if (!nascimento || !sexo) {
+    alert("Informe a data de nascimento e o sexo.");
+    return;
+  }
+
+  const idade = calcularIdade(nascimento);
+
+  if (
+    idade < 10 ||
+    idade > 120 ||
+    peso < 20 ||
+    peso > 350 ||
+    alturaCm < 100 ||
+    alturaCm > 250
+  ) {
+
+    alert("Confira os dados. A calculadora aceita pessoas de 10 a 120 anos.");
+
+    return;
+
+  }
+
+  const altura = alturaCm / 100;
+
+  const imc = peso / (altura * altura);
+
+  const resultado = document.getElementById("resultado");
+
+  const status = document.getElementById("imcStatus");
+
+  const mensagem = document.getElementById("mensagem");
+
+  document.getElementById("imcValor").textContent =
+    imc.toFixed(1).replace(".", ",");
+
+  document.querySelectorAll(".scale-item").forEach(item => {
+    item.classList.remove("active");
+  });
+
+  // PESSOAS DE 10 A 19 ANOS
+
+  if (idade < 20) {
+
+    const meses = idadeEmMeses(nascimento);
+
+    status.textContent = "IMC POR IDADE";
+
+    status.className = "status purple";
+
+    mensagem.textContent =
+      "Seu IMC foi calculado. Para crianças e adolescentes, a interpretação depende da idade em meses e do sexo, utilizando as curvas de crescimento da OMS. O resultado precisa ser avaliado por um profissional de saúde.";
+
+    // Esconde a escala adulta
+    document.querySelector(".scale-title").style.display = "none";
+
+    document.querySelector(".scale").style.display = "none";
+
+    document.querySelector(".scale-labels").style.display = "none";
+
+    // Não apresenta recomendações comerciais para menores
+    esconderRecomendacoes();
+
+    ultimoResultado = {
+      nome: nome || "Não informado",
+      idade,
+      meses,
+      sexo,
+      peso,
+      altura: alturaCm,
+      imc: imc.toFixed(1).replace(".", ","),
+      categoria: "IMC por idade - avaliação profissional necessária"
+    };
+
+  }
+
+  // PESSOAS COM 20 ANOS OU MAIS
+
+  else {
+
+    document.querySelector(".scale-title").style.display = "block";
+
+    document.querySelector(".scale").style.display = "flex";
+
+    document.querySelector(".scale-labels").style.display = "grid";
+
+    let categoria = "";
+
+    let mensagemTexto = "";
+
+    let classe = "";
+
+    let codigo = "";
+
+    if (imc < 18.5) {
+
+      categoria = "ABAIXO DO PESO";
+
+      classe = "orange";
+
+      codigo = "baixo";
+
+      mensagemTexto =
+        "Seu IMC está abaixo da faixa de referência. Vale conversar com um profissional de saúde para avaliar sua alimentação e suas necessidades nutricionais.";
+
+    }
+
+    else if (imc < 25) {
+
+      categoria = "PESO ADEQUADO";
+
+      classe = "green";
+
+      codigo = "adequado";
+
+      mensagemTexto =
+        "Seu IMC está dentro da faixa de referência. Continue cuidando da alimentação, hidratação, movimento e descanso.";
+
+    }
+
+    else if (imc < 30) {
+
+      categoria = "SOBREPESO";
+
+      classe = "orange";
+
+      codigo = "sobrepeso";
+
+      mensagemTexto =
+        "Seu IMC está na faixa de sobrepeso. Converse com um profissional de saúde sobre seus hábitos e objetivos.";
+
+    }
+
+    else if (imc < 35) {
+
+      categoria = "OBESIDADE GRAU I";
+
+      classe = "orange";
+
+      codigo = "obesidade1";
+
+      mensagemTexto =
+        "Seu IMC está na faixa de obesidade grau I. O acompanhamento profissional pode ajudar a definir cuidados adequados.";
+
+    }
+
+    else if (imc < 40) {
+
+      categoria = "OBESIDADE GRAU II";
+
+      classe = "red";
+
+      codigo = "obesidade2";
+
+      mensagemTexto =
+        "Seu IMC está na faixa de obesidade grau II. Procure acompanhamento profissional para uma avaliação individualizada.";
+
+    }
+
+    else {
+
+      categoria = "OBESIDADE GRAU III";
+
+      classe = "red";
+
+      codigo = "obesidade3";
+
+      mensagemTexto =
+        "Seu IMC está na faixa de obesidade grau III. É importante buscar acompanhamento de uma equipe de saúde.";
+
+    }
+
+    status.textContent = categoria;
+
+    status.className = "status " + classe;
+
+    mensagem.textContent = mensagemTexto;
+
+    document.querySelectorAll(".scale-item").forEach(item => {
+
+      item.classList.toggle(
+        "active",
+        item.dataset.category === codigo
+      );
+
+    });
+
+    let grupo;
+
+    if (codigo === "baixo") {
+
+      grupo = "ganho";
+
+    }
+
+    else if (codigo === "adequado") {
+
+      grupo = "equilibrio";
+
+    }
+
+    else {
+
+      grupo = "controle";
+
+    }
+
+    mostrarRecomendacoes(grupo);
+
+    ultimoResultado = {
+      nome: nome || "Não informado",
+      idade,
+      sexo,
+      peso,
+      altura: alturaCm,
+      imc: imc.toFixed(1).replace(".", ","),
+      categoria
+    };
+
+  }
+
+  resultado.style.display = "block";
+
+  resultado.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+});
+
+function consultar(produto) {
+
+  const mensagem =
+    "Olá! Acessei o Peso Certo do Atacadão Farma Centro e gostaria de consultar informações e disponibilidade sobre: " +
+    produto + ".";
+
+  abrirWhatsApp(mensagem);
+
+}
+
+function enviarResultado() {
+
+  if (!ultimoResultado) return;
+
+  const r = ultimoResultado;
+
+  const mensagem =
+
+    "Olá! Fiz meu cálculo no Peso Certo do Atacadão Farma Centro.\n\n" +
+
+    "Nome: " + r.nome + "\n" +
+
+    "Idade: " + r.idade + " anos\n" +
+
+    "Sexo de referência: " + r.sexo + "\n" +
+
+    "Peso: " + r.peso + " kg\n" +
+
+    "Altura: " + r.altura + " cm\n" +
+
+    "IMC: " + r.imc + "\n" +
+
+    "Classificação: " + r.categoria + "\n\n" +
+
+    "Gostaria de conversar com a equipe.";
+
+  abrirWhatsApp(mensagem);
+
+}
+
+function abrirWhatsApp(mensagem) {
+
+  const url =
+    "https://wa.me/" + WHATSAPP +
+    "?text=" + encodeURIComponent(mensagem);
+
+  window.open(url, "_blank");
+
+}
+
+</script>
